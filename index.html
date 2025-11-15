@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>2048 Game - Gabungkan Angka!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2048</h1>
+            <p class="subtitle">Gabungkan angka hingga mencapai <strong>2048</strong>!</p>
+        </header>
+
+        <div class="score-container">
+            <div class="score-box">
+                <div class="score-label">SKOR</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">TERBAIK</div>
+                <div class="score-value" id="best-score">0</div>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <p class="instructions">
+                <strong>Cara Bermain:</strong> Gunakan tombol panah keyboard atau swipe untuk menggabungkan tile dengan angka yang sama!
+            </p>
+            <button class="new-game-btn" id="new-game-btn">Permainan Baru</button>
+        </div>
+
+        <div class="game-container">
+            <div class="grid-container" id="grid-container">
+                <!-- Grid cells (background) -->
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <!-- Tiles container (overlay) -->
+            <div class="tile-container" id="tile-container"></div>
+
+            <!-- Game over overlay -->
+            <div class="game-message" id="game-message">
+                <div class="message-content">
+                    <h2 id="message-title">Game Over!</h2>
+                    <p id="message-text">Tidak ada gerakan yang tersedia</p>
+                    <button class="try-again-btn" id="try-again-btn">Coba Lagi</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="tips">
+                <strong>Tips:</strong> Jaga tile dengan nilai tertinggi di sudut dan bangun angka di sekitarnya!
+            </p>
+            <p class="credits">Dibuat dengan ❤️ menggunakan HTML, CSS, dan JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
